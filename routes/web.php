@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FirebaseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,13 +21,13 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [FirebaseController::class, 'index'])->name('home');
 
 // Route to go to the single item page to edit it
-Route::get('/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
+Route::get('/edit/{id}', [FirebaseController::class, 'edit']);
 
 // Route to update some data in single item
-Route::post('/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('update');
+Route::post('/update/{id}', [FirebaseController::class, 'update'])->name('update');
 
 Route::post('login/{provider}/callback', 'Auth\LoginController@handleCallback');
 
