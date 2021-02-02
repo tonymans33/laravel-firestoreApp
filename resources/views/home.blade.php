@@ -4,6 +4,16 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <center><div style="width: 600px;">
+                    @if(session('successMsg'))
+                        <center>
+                            <div class="alert alert-success" role="alert">
+                                {{session('successMsg')}}
+                            </div>
+                        </center>
+                    @endif
+                </div>
+            </center>
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -25,13 +35,14 @@
                             </thead>
                             <tbody>
 
+                            @foreach($items as $item)
                                     <tr>
                                         <th scope="row"></th>
-                                        <td></td>
-                                        <td></td>
-                                        <td><a href=""><i class="fa fa-edit "></i></a></td>
+                                        <td>{{$item['title']}}</td>
+                                        <td>{{$item['cost']}}</td>
+                                        <td><a href="/edit/{{$item->id()}}"><i class="fa fa-edit "></i></a></td>
                                     </tr>
-
+                            @endforeach
                             </tbody>
                         </table>
 
