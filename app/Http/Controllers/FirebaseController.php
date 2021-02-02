@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InsertItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use Google\Cloud\Firestore\FirestoreClient;
 use Illuminate\Contracts\Support\Renderable;
@@ -33,6 +34,29 @@ class FirebaseController extends Controller
         $items = app('firebase.firestore')->database()->collection('Items')->documents();
 
         return view('home')->with('items', $items);
+    }
+
+    /**
+     * Function to go to insert page for creating a new item
+     * @return Factory|View
+     */
+    public function insert(){
+        return view('insert');
+    }
+
+    public function store(InsertItemRequest $request){
+
+        $data = $request->validated();
+
+        // Creating a new item
+        $stuRef = app('firebase.firestore')->database()->collection('Items')->newDocument();
+        $stuRef->set([
+            'title' => $data['title'],
+            'cost' => $data['cost'],
+        ]);
+
+        return redirect()->route('home')->with(['successMsg' => 'Inserted !' ]);
+
     }
 
     /**

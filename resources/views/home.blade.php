@@ -15,7 +15,9 @@
                 </div>
             </center>
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header" style="display: flex; flex-direction: column">
+                    <div>Dashboard</div>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -45,6 +47,8 @@
                             @endforeach
                             </tbody>
                         </table>
+                        <a style="text-decoration: none;" href="/insert"><button class="btn btn-info my-4 btn-block" name="update" type="submit" style="width:200px;">Insert</button></a>
+
 
 
                 </div>

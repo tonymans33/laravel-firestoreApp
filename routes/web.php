@@ -23,6 +23,12 @@ Auth::routes();
 
 Route::get('/home', [FirebaseController::class, 'index'])->name('home');
 
+// Route to go to the insert page
+Route::get('/insert', [FirebaseController::class, 'insert'])->name('insert');
+
+// Route to insert new item
+Route::post('/store', [FirebaseController::class, 'store'])->name('store');
+
 // Route to go to the single item page to edit it
 Route::get('/edit/{id}', [FirebaseController::class, 'edit']);
 
