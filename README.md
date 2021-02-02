@@ -29,7 +29,7 @@ composer update
 Create .env file ( *copy the content from .env.example* !important )
 
 ```bash
-cp .env.example .env
+cp .env.example .env OR rename the .env.example file to .env
 ```
 
 Then you will have to generate key
@@ -41,7 +41,7 @@ php artisan key:generate
 Last think, run the server
 
 ```bash
-php artisan server
+php artisan serve
 ```
 
 Get your API key from firebase [refer video](https://www.youtube.com/watch?v=75aEgBYaexg&t=22s) and paste the key in resources\credentials\firebase_credentials.json
