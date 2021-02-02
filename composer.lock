@@ -891,57 +891,6 @@
             "time": "2021-01-13T22:28:48+00:00"
         },
         {
-            "name": "google/cloud-firestore",
-            "version": "v1.19.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/googleapis/google-cloud-php-firestore.git",
-                "reference": "a91924fb71fbd775ddcaa84fecb3fc9d0da14953"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-firestore/zipball/a91924fb71fbd775ddcaa84fecb3fc9d0da14953",
-                "reference": "a91924fb71fbd775ddcaa84fecb3fc9d0da14953",
-                "shasum": ""
-            },
-            "require": {
-                "ext-grpc": "*",
-                "google/cloud-core": "^1.39",
-                "google/gax": "^1.1",
-                "ramsey/uuid": "^3.0|^4.0"
-            },
-            "require-dev": {
-                "erusev/parsedown": "^1.6",
-                "phpdocumentor/reflection": "^3.0",
-                "phpunit/phpunit": "^4.8|^5.0",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "suggest": {
-                "ext-protobuf": "Provides a significant increase in throughput over the pure PHP protobuf implementation. See https://cloud.google.com/php/grpc for installation instructions."
-            },
-            "type": "library",
-            "extra": {
-                "component": {
-                    "id": "cloud-firestore",
-                    "target": "googleapis/google-cloud-php-firestore.git",
-                    "path": "Firestore",
-                    "entry": "src/FirestoreClient.php"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Google\\Cloud\\Firestore\\": "src",
-                    "GPBMetadata\\Google\\Firestore\\": "metadata"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Cloud Firestore client for PHP",
-            "time": "2020-12-04T23:27:56+00:00"
-        },
-        {
             "name": "google/cloud-storage",
             "version": "v1.23.1",
             "source": {

@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\InsertItemRequest;
 use App\Http\Requests\UpdateItemRequest;
-use Google\Cloud\Firestore\FirestoreClient;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 
 class FirebaseController extends Controller
 {
