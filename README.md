@@ -20,10 +20,28 @@ Use **GIT** for cloning the repository ( Can download from repository also )
 git clone https://github.com/suhasrkms/laravel-with-firebase-auth.git
 ```
 
+You will have to update & install composer
+
+```bash
+composer update
+```
+
 Create .env file ( *copy the content from .env.example* !important )
 
 ```bash
 cp .env.example .env
+```
+
+Then you will have to generate key
+
+```bash
+php artisan key:generate
+```
+
+Last think, run the server
+
+```bash
+php artisan server
 ```
 
 Get your API key from firebase [refer video](https://www.youtube.com/watch?v=75aEgBYaexg&t=22s) and paste the key in resources\credentials\firebase_credentials.json
