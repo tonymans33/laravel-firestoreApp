@@ -79,13 +79,13 @@
       <script>
       // Initialize Firebase
       var firebaseConfig = {
-        apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        authDomain: "XXXXXXXXX.firebaseapp.com",
-        projectId: "XXXXXXXX-XXXX",
-        storageBucket: "XXXXXXXXX.appspot.com",
-        messagingSenderId: "XXXXXXXXXXXX",
-        appId: "XXXXXXXXXXXXXXXXXXXXX",
-        measurementId: "G-XXXXXXXX"
+          apiKey: "AIzaSyAMjsDP5WxxzHUWDYF1u63ZL7E3l_5T9LA",
+          authDomain: "fir-firestore-2995b.firebaseapp.com",
+          projectId: "fir-firestore-2995b",
+          storageBucket: "fir-firestore-2995b.appspot.com",
+          messagingSenderId: "235599230826",
+          appId: "1:235599230826:web:cdb6ebfa7f7b1498759713",
+          measurementId: "G-GGWR9EH7VK"
       };
       firebase.initializeApp(config);
       var facebookProvider = new firebase.auth.FacebookAuthProvider();

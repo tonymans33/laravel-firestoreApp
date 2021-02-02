@@ -14,7 +14,28 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">name</th>
+                                <th scope="col">id</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href=""><i class="fa fa-edit "></i></a></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
                 </div>
             </div>
         </div>
