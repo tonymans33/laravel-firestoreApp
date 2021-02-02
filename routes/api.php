@@ -15,5 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    // Route to go to the single item page to edit it
+    Route::get('/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
+
+    // Route to update some data in single item
+    Route::post('/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('update');
+
+    Route::post('login/{provider}/callback', 'Auth\LoginController@handleCallback');
+
 });
